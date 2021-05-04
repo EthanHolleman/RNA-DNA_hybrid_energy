@@ -1,0 +1,67 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job counts:
+	count	jobs
+	1	all
+	23	profile_hybrid_init_energies
+	18	unzip_chrom_file
+	42
+Select jobs to execute...
+
+[Mon May  3 21:56:43 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr2.fa.gz
+    output: rawdata/hg19/chr2.fa
+    jobid: 5
+    wildcards: chr_name=chr2
+
+
+[Mon May  3 21:56:43 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr8.fa.gz
+    output: rawdata/hg19/chr8.fa
+    jobid: 23
+    wildcards: chr_name=chr8
+
+
+[Mon May  3 21:56:43 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr3.fa.gz
+    output: rawdata/hg19/chr3.fa
+    jobid: 8
+    wildcards: chr_name=chr3
+
+
+[Mon May  3 21:56:43 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr13.fa.gz
+    output: rawdata/hg19/chr13.fa
+    jobid: 38
+    wildcards: chr_name=chr13
+
+[Mon May  3 21:56:44 2021]
+Finished job 38.
+1 of 42 steps (2%) done
+Select jobs to execute...
+
+[Mon May  3 21:56:44 2021]
+rule profile_hybrid_init_energies:
+    input: rawdata/hg19/chr18.fa
+    output: output/chr18.hybrid_init.bedgraph
+    jobid: 52
+    wildcards: chrom_name=chr18
+
+InputFunctionException in line 41 of /home/ethan/Documents/github/hybrid_energy/snakefile:
+Error:
+  AttributeError: 'Wildcards' object has no attribute 'chrom_file'
+Wildcards:
+  chrom_name=chr18
+Traceback:
+  File "/home/ethan/Documents/github/hybrid_energy/snakefile", line 52, in <lambda>
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 136, in run_jobs
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 455, in run
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 499, in run_single_job
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 476, in job_args_and_prepare

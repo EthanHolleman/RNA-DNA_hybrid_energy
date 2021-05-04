@@ -1,0 +1,3 @@
+NameError in line 11 of /home/ethan/Documents/github/hybrid_energy/snakefile:
+name 'chrom_file_names' is not defined
+  File "/home/ethan/Documents/github/hybrid_energy/snakefile", line 11, in <module>

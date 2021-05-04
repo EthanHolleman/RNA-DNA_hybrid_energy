@@ -1,0 +1,87 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job counts:
+	count	jobs
+	1	all
+	23	profile_hybrid_init_energies
+	23	unzip_chrom_file
+	47
+Select jobs to execute...
+
+[Mon May  3 21:55:20 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr7.fa.gz
+    output: rawdata/hg19/chr7.fa
+    jobid: 20
+    wildcards: chr_name=chr7
+
+
+[Mon May  3 21:55:20 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chrY.fa.gz
+    output: rawdata/hg19/chrY.fa
+    jobid: 68
+    wildcards: chr_name=chrY
+
+
+[Mon May  3 21:55:20 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr18.fa.gz
+    output: rawdata/hg19/chr18.fa
+    jobid: 53
+    wildcards: chr_name=chr18
+
+
+[Mon May  3 21:55:20 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr1.fa.gz
+    output: rawdata/hg19/chr1.fa
+    jobid: 2
+    wildcards: chr_name=chr1
+
+[Mon May  3 21:55:20 2021]
+Error in rule unzip_chrom_file:
+[Mon May  3 21:55:20 2021]
+[Mon May  3 21:55:20 2021]
+    jobid: 20
+Error in rule unzip_chrom_file:
+Error in rule unzip_chrom_file:
+    output: rawdata/hg19/chr7.fa
+    jobid: 68
+    jobid: 53
+    shell:
+        
+    unzip rawdata/hg19/chr7.fa.gz
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    output: rawdata/hg19/chrY.fa
+    shell:
+        
+    unzip rawdata/hg19/chrY.fa.gz
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+    output: rawdata/hg19/chr18.fa
+
+    shell:
+        
+    unzip rawdata/hg19/chr18.fa.gz
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon May  3 21:55:20 2021]
+Error in rule unzip_chrom_file:
+    jobid: 2
+    output: rawdata/hg19/chr1.fa
+    shell:
+        
+    unzip rawdata/hg19/chr1.fa.gz
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /home/ethan/Documents/github/hybrid_energy/.snakemake/log/2021-05-03T215520.549851.snakemake.log

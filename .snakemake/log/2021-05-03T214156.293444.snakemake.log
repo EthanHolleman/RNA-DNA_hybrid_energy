@@ -1,0 +1,43 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job counts:
+	count	jobs
+	1	all
+	1	download_hg19_chromosomes
+	1	profile_all_chromosomes
+	3
+Select jobs to execute...
+
+[Mon May  3 21:41:56 2021]
+rule download_hg19_chromosomes:
+    output: rawdata/hg19, rawdata/hg19/download.done
+    jobid: 2
+
+[Mon May  3 21:45:34 2021]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Mon May  3 21:45:34 2021]
+rule profile_all_chromosomes:
+    input: rawdata/hg19/download.done
+    output: all_profiles.done
+    jobid: 1
+
+[Mon May  3 21:45:34 2021]
+Finished job 1.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Mon May  3 21:45:34 2021]
+localrule all:
+    input: all_profiles.done
+    jobid: 0
+
+[Mon May  3 21:45:34 2021]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: /home/ethan/Documents/github/hybrid_energy/.snakemake/log/2021-05-03T214156.293444.snakemake.log

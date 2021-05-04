@@ -1,0 +1,31 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job counts:
+	count	jobs
+	1	all
+	23	profile_hybrid_init_energies
+	14	unzip_chrom_file
+	38
+Select jobs to execute...
+
+[Mon May  3 21:57:16 2021]
+rule profile_hybrid_init_energies:
+    input: rawdata/hg19/chr7.fa
+    output: output/chr7.hybrid_init.bedgraph
+    jobid: 19
+    wildcards: chrom_name=chr7
+
+InputFunctionException in line 41 of /home/ethan/Documents/github/hybrid_energy/snakefile:
+Error:
+  AttributeError: 'Wildcards' object has no attribute 'chrom_file'
+Wildcards:
+  chrom_name=chr7
+Traceback:
+  File "/home/ethan/Documents/github/hybrid_energy/snakefile", line 52, in <lambda>
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 136, in run_jobs
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 455, in run
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 499, in run_single_job
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 476, in job_args_and_prepare

@@ -1,0 +1,33 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job counts:
+	count	jobs
+	1	all
+	1	download_hg19_chromosomes
+	1	profile_all_chromosomes
+	3
+Select jobs to execute...
+
+[Mon May  3 21:23:16 2021]
+rule download_hg19_chromosomes:
+    output: rawdata/hg19, rawdata/hg19/download.done
+    jobid: 2
+
+Terminating processes on user request, this might take some time.
+[Mon May  3 21:23:45 2021]
+Error in rule download_hg19_chromosomes:
+    jobid: 2
+    output: rawdata/hg19, rawdata/hg19/download.done
+    shell:
+        
+    wget -P rawdata/hg19 --timestamping     ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/chromosomes/*
+    touch rawdata/hg19
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job download_hg19_chromosomes since they might be corrupted:
+rawdata/hg19
+Complete log: /home/ethan/Documents/github/hybrid_energy/.snakemake/log/2021-05-03T212316.970068.snakemake.log

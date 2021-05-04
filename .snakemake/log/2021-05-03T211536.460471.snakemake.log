@@ -1,0 +1,4 @@
+FileNotFoundError in line 3 of /home/ethan/Documents/github/hybrid_energy/snakefile:
+[Errno 2] No such file or directory: 'rawdata/hg19'
+  File "/home/ethan/Documents/github/hybrid_energy/snakefile", line 3, in <module>
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/pathlib.py", line 1312, in mkdir

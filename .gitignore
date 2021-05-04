@@ -1,0 +1,4 @@
+*.bed
+*.bedgraph
+rawdata/
+output/

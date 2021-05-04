@@ -1,0 +1,79 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job counts:
+	count	jobs
+	1	all
+	23	profile_hybrid_init_energies
+	23	unzip_chrom_file
+	47
+Select jobs to execute...
+
+[Mon May  3 21:56:10 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr7.fa.gz
+    output: rawdata/hg19/chr7.fa
+    jobid: 20
+    wildcards: chr_name=chr7
+
+
+[Mon May  3 21:56:10 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chrY.fa.gz
+    output: rawdata/hg19/chrY.fa
+    jobid: 68
+    wildcards: chr_name=chrY
+
+
+[Mon May  3 21:56:10 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr18.fa.gz
+    output: rawdata/hg19/chr18.fa
+    jobid: 53
+    wildcards: chr_name=chr18
+
+
+[Mon May  3 21:56:10 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr1.fa.gz
+    output: rawdata/hg19/chr1.fa
+    jobid: 2
+    wildcards: chr_name=chr1
+
+[Mon May  3 21:56:11 2021]
+Finished job 68.
+1 of 47 steps (2%) done
+Select jobs to execute...
+
+[Mon May  3 21:56:11 2021]
+rule unzip_chrom_file:
+    input: rawdata/hg19/chr5.fa.gz
+    output: rawdata/hg19/chr5.fa
+    jobid: 14
+    wildcards: chr_name=chr5
+
+[Mon May  3 21:56:11 2021]
+Finished job 53.
+2 of 47 steps (4%) done
+Select jobs to execute...
+
+[Mon May  3 21:56:11 2021]
+rule profile_hybrid_init_energies:
+    input: rawdata/hg19/chrY.fa
+    output: output/chrY.hybrid_init.bedgraph
+    jobid: 67
+    wildcards: chrom_name=chrY
+
+InputFunctionException in line 41 of /home/ethan/Documents/github/hybrid_energy/snakefile:
+Error:
+  AttributeError: 'Wildcards' object has no attribute 'chrom_file'
+Wildcards:
+  chrom_name=chrY
+Traceback:
+  File "/home/ethan/Documents/github/hybrid_energy/snakefile", line 52, in <lambda>
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 136, in run_jobs
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 455, in run
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 499, in run_single_job
+  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/site-packages/snakemake/executors/__init__.py", line 476, in job_args_and_prepare
