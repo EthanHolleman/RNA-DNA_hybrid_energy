@@ -1,6 +1,0 @@
-FileNotFoundError in line 11 of /home/ethan/Documents/github/hybrid_energy/snakefile:
-[Errno 2] No such file or directory: 'rawdata/hg19'
-  File "/home/ethan/Documents/github/hybrid_energy/snakefile", line 33, in <module>
-  File "/home/ethan/Documents/github/hybrid_energy/snakefile", line 15, in chrom_file_names
-  File "/home/ethan/Documents/github/hybrid_energy/snakefile", line 11, in get_all_downloaded_chrom_filepaths
-  File "/home/ethan/anaconda3/envs/snakemake/lib/python3.9/pathlib.py", line 1149, in iterdir

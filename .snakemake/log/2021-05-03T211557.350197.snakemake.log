@@ -1,3 +1,0 @@
-WildcardError in line 34 of /home/ethan/Documents/github/hybrid_energy/snakefile:
-No values given for wildcard 'chrom_file'.
-  File "/home/ethan/Documents/github/hybrid_energy/snakefile", line 34, in <module>

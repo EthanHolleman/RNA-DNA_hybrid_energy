@@ -2,3 +2,4 @@
 *.bedgraph
 rawdata/
 output/
+.snakemake/

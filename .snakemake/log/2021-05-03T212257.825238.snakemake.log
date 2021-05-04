@@ -1,2 +1,0 @@
-SyntaxError in line 7 of /home/ethan/Documents/github/hybrid_energy/snakefile:
-Expecting rule keyword, comment or docstrings inside a rule definition. (snakefile, line 7)
